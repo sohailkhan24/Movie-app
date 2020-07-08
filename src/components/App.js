@@ -1,8 +1,8 @@
 import React from 'react';
 import { data }  from '../data';
 import Navbar from './Navbar';
-import   fromimport MovieCard from './MovieCard';
- './MovieCard'
+import MovieCard from './MovieCard';
+ 
 // map-iterate
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
       <Navbar/>
       <div className="main">
         <div className="tabs">
-          <div  className="movies">Movies</div>
-          <div  className="favourite">Favourite</div>
+          <div  className="tab">Movies</div>
+          <div  className="tab">Favourite</div>
         </div>
         <div className="list">
           
