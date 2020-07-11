@@ -1,8 +1,8 @@
 import React from 'react';
-// import { data }  from '../data';
+import { data }  from '../data';
 import Navbar from './Navbar';
 import MovieCard from './MovieCard';
-// import { render } from '@testing-library/react';
+
 import {addMovies} from '../actions';
 // map-iterate
 
