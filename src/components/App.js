@@ -2,8 +2,8 @@ import React from 'react';
 // import { data }  from '../data';
 import Navbar from './Navbar';
 import MovieCard from './MovieCard';
-import { render } from '@testing-library/react';
- 
+// import { render } from '@testing-library/react';
+import {addMovies} from '../actions';
 // map-iterate
 
 class  App extends React.Component {
@@ -15,10 +15,7 @@ class  App extends React.Component {
     });
     // make api call
     //dispatch an action
-    this.props.store.dispatch({
-      type:'ADD_MOVIES',
-      movies:data
-    });
+    this.props.store.dispatch(addMovies(data));
   }
   render(){
   const movies = this.props.store.getState();
