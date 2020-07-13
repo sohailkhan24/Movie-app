@@ -109,7 +109,7 @@ body {
 }
 .active-tabs {
   background: #2185d0 !important;
-  color: white;
+  color:white;
 }
 .main .tabs .tab:hover {
   cursor: pointer;
@@ -179,7 +179,8 @@ body {
   text-shadow: none;
 }
 .no-movies {
-  padding: 20px 0;
+  margin: 20px auto;
+  margin-left: 500px;
   font-size: 20px;
   color: #6d6d6d;
 }
