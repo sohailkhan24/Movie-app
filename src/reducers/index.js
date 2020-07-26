@@ -1,16 +1,17 @@
+import { combineReducers } from 'redux';
 import{ADD_MOVIES,ADD_FAVOURITE,REMOVE_FAVOURITE, SET_SHOW_FAVOURITE} from '../actions'
 const initialMoviesState={
     list:[],
     favourites:[],
     showFavourite: false
 }
-export default function movies(state =initialMoviesState,action){
+export  function movies(state =initialMoviesState,action){
     // if(action.type === ADD_MOVIES){
     //     return{
     //         ...state,
     //         list:action.movies
     //     } 
-    // } bro i checked from ur code too couldn't find any error ok some typo error is there may be
+    // } 
     // return state;
     switch(action.type){
         case ADD_MOVIES:
@@ -40,3 +41,26 @@ export default function movies(state =initialMoviesState,action){
             return state;   
     }
 }
+const initialSearchState ={
+    result :{}
+};
+export function search (state ={result:{}},action){
+    return state;
+
+}
+const initialRootState={
+    movies:initialMoviesState,
+    search:initialSearchState
+
+}
+// export default function rootReducer (state=initialRootState,action){
+//     return{
+//         movies:movies(state.movies,action),
+//         search:search(state.search,action)
+//     }
+// }
+
+export default combineReducers({
+movies:movies,
+search:search
+});

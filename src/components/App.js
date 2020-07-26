@@ -16,13 +16,13 @@ class  App extends React.Component {
     // make api call
     //dispatch an action
     // console.log('in mount',this.props.store);
-    this.props.store.dispatch(addMovies(data));
+    store.dispatch(addMovies(data));
   }
 
 
   isMovieFavourite = (movie) => {
-    const {favourites} = this.props.store.getState();
-    const index=favourites.indexOf(movie);
+    const {movies} = this.props.store.getState();
+    const index=movies.favourites.indexOf(movie);
 
     if(index!== -1){
     //   //found movie
@@ -37,8 +37,9 @@ class  App extends React.Component {
 
 
   render(){
+    const {movies}=this.props.store.getState();//{ movies: {}, search:{}}
     // console.log('app list',this.props.store.getState());
-  const { list,favourites,showFavourite } = this.props.store.getState();//{list:[] favourites;[]}
+  const { list,favourites,showFavourite } = movies;//{list:[] favourites;[]}
   const displayMovies =showFavourite ? favourites :list
   return (
     <div className="App">
